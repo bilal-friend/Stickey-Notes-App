@@ -1,0 +1,135 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #003d33;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #004d43;
+}
+
+body {
+  background-color: #006d63;
+  margin: 0;
+  position: relative;
+}
+body::after {
+  content: "";
+  display: block;
+  height: 70px; /* Set same as footer's height */
+}
+
+h1 {
+  color: white;
+  font-family: cursive;
+  text-align: center;
+  margin-top: 20px;
+}
+.card,
+.add-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: white;
+}
+.add-card {
+  background-color: #046159;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.add-card:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.add-card p {
+  font-size: 60px;
+  width: 300px;
+  height: 40%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+.card {
+  position: relative;
+}
+.trash {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: none;
+}
+section {
+  display: flex;
+  padding: 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+textarea {
+  border: none;
+
+  width: inherit;
+  height: inherit;
+  resize: none;
+  overflow: hidden;
+  border-radius: inherit;
+  padding: 20px;
+  font-size: 20px;
+  font-family: sans-serif;
+  line-height: 1.8;
+}
+
+@media only screen and (max-width: 755px) {
+  section {
+    width: 520px;
+    margin: auto;
+  }
+  .card,
+  .add-card {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    width: calc(76vw + 20px);
+    padding: 20px;
+  }
+  .card,
+  .add-card {
+    width: 38vw;
+    height: 38vw;
+  }
+  .trash {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  section {
+    width: fit-content;
+    padding: 10px;
+  }
+  .card,
+  .add-card {
+    width: 43vw;
+    font-size: 18px;
+  }
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-size: 13px;
+  font-family: cursive;
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  height: 65px;
+  line-height: 0.6;
+  text-align: center;
+}
